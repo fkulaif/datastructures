@@ -33,17 +33,6 @@ public class LinkedList {
             temp = temp.next;
         }
     }
-    public void append(int value) {
-       Node newNode = new Node(value);
-       if(length == 0){ // head, tail equal to null  list is empty
-           head = newNode;
-           tail = newNode;
-       }else{
-           tail.next = newNode;
-           tail = newNode;
-       }
-       length++; // // The length of the list is 2
-    }
 
     public void prepend(int value){
         Node newNode = new Node(value);
