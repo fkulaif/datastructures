@@ -45,6 +45,17 @@ public class LinkedList {
        length++; // // The length of the list is 2
     }
 
+    public void prepend(int value){
+        Node newNode = new Node(value);
+        if(length == 0) {
+            head = newNode;
+            tail = newNode;
+        }else{
+            newNode.next = head; // read: newNode.next -> to head  [node set to head]
+            head = newNode;  // head -> newNode
+        }
+        length++;
+    }
     public void printAll() {
         if (length == 0) {
             System.out.println("Head: null");
